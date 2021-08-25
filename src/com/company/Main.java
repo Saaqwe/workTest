@@ -16,7 +16,6 @@ public class Main {
             String inputLine =  sc.nextLine();
             String[] inputArr = inputLine.split(" ");
             String command = inputArr[0];
-
             switch (command) {
                 // Добавление кординат
                 case  ("add"):
@@ -26,8 +25,6 @@ public class Main {
                     break;
                 // Вывод групп
                 case ("print"):
-                    //Вспомогательный список точек, для промежуточный вычислений
-                    //List<DotPair> dotsGroup = new ArrayList<>();
                     List<DotPair> dotsGroup = dotsArr;
                     // Вывод всех групп
                     if(inputArr.length == 1) {
@@ -53,7 +50,6 @@ public class Main {
                         }
                         System.out.println();
                     }
-
                     break;
                 // Удаление кордиат
                 case ("remove"):
@@ -75,13 +71,6 @@ public class Main {
                     break;
                 // Вывод списка команд для вызова
                 case ("help"):
-              //      String addHelp = "add <point> - данная команда добавляет кодинаты парами, кординаты  записываются через" +
-            //                " пробел, например: add 9 8 0 2, данная команда добавит 2 кординаты (9,8) и (0,2)";
-            //        System.out.println(addHelp);
-           //         String printHelp1 = "print - комманда выводит построчно все точки из всех групп, начиная с первой, " +
-           //                 "в последней строке выводиться количество кординат не принадлежащих н одной группе";
-          //          String printHelp2 = "print <group_num> - комманда выводит точки, которые входят в заданные в параметрах группы, пример команды: print 1 2";
-          //          System.out.println(printHelp2);
                     String helpString = "add <point> - данная команда добавляет кодинаты парами, кординаты  записываются через " +
                                                 "пробел, например: add 9 8 0 2, данная команда добавит 2 кординаты (9,8) и (0,2). \n" +
                                         "print - комманда выводит построчно все точки из всех групп, начиная с первой, в последней " +
@@ -91,9 +80,7 @@ public class Main {
                                         "remove <group_num> - команда удаляет из памяти кординаты, которые содержаться " +
                                                 "в переданных группах, пример команды: remove 1 2. \n" +
                                         "clear - команда стирает все точки из памяти.";
-
                     System.out.println(helpString);
-                    //String removeHelp = "remove - ";
                     break;
                 // Вывод сообщения в случаи неправельно введенной команды
                 default:
